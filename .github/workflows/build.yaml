@@ -15,8 +15,7 @@ jobs:
 secrets.DOCKER_PASSWORD }}
     - name: Build the Docker image
       id: build
-      run: docker build . --file Dockerfile --tag ${{ secrets.
-DOCKER_USER  }}/sky-mappe-actions
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER  }}/sky-mappe-actions
     - name: Push the Docker image
       id: push
       run: docker push ${{ secrets.DOCKER_USER  }}/sky-mappe-actions
